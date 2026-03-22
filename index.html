@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXTT - AI Tennis Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">NEXTT</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">What's Your Next?</h1>
+        <p class="hero-subtitle">Discover your tennis potential with AI-powered analysis</p>
+        <button class="btn btn-primary" onclick="scrollToForm()">Start Analysis</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="form-section">
+    <div class="form-card" id="form-card">
+      <p class="mini-label">AI TENNIS ANALYSIS</p>
+      <h2>Tennis Analysis</h2>
+      <p class="form-text">Share your details and get your personalized AI evaluation</p>
+
+      <form id="tennis-form">
+        <select name="experience" required>
+          <option value="">Have you ever played tennis before?</option>
+          <option value="Never">Never</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <select name="hours" required>
+          <option value="">How many hours per week can you train?</option>
+          <option value="1-2">1-2 hours</option>
+          <option value="3-5">3-5 hours</option>
+          <option value="6-10">6-10 hours</option>
+          <option value="10+">10+ hours</option>
+        </select>
+
+        <input
+          type="number"
+          name="endurance"
+          min="1"
+          max="10"
+          placeholder="Rate your endurance (1-10)"
+          required
+        />
+
+        <select name="reflex" required>
+          <option value="">How fast are your reflexes?</option>
+          <option value="Slow">Slow</option>
+          <option value="Average">Average</option>
+          <option value="Fast">Fast</option>
+        </select>
+
+        <select name="focus" required>
+          <option value="">Do you stay focused under pressure?</option>
+          <option value="Yes">Yes</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="No">No</option>
+        </select>
+
+        <select name="discipline" required>
+          <option value="">Can you follow a strict training plan?</option>
+          <option value="Yes">Yes</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="No">No</option>
+        </select>
+
+        <select name="goal" required>
+          <option value="">What is your goal?</option>
+          <option value="Hobby">Hobby</option>
+          <option value="Competitive">Competitive</option>
+          <option value="Professional">Professional</option>
+        </select>
+
+        <button type="submit" class="submit-btn">See My AI Result</button>
+      </form>
+
+      <p class="powered">Powered by AI analysis and real coaching insight.</p>
+    </div>
+
+    <!-- AI Result Card (hidden by default) -->
+    <div class="result-card" id="result-card" style="display:none;">
+      <p class="mini-label">YOUR AI ANALYSIS</p>
+      <h2>Your Result</h2>
+      <div class="result-loading" id="result-loading">
+        <div class="spinner"></div>
+        <p>Analyzing your tennis profile...</p>
+      </div>
+      <div class="result-content" id="result-content" style="display:none;"></div>
+      <button class="btn btn-secondary" onclick="resetForm()">Start Over</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 NEXTT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
